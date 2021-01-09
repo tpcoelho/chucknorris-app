@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  ChuckNorrisApp
+
+  Created by Tiago Coelho on 09/01/21.
+  
+*/
+
+"animal" = "animal";
+"career" = "carreira";
+"celebrity" = "celebridade";
+"dev" =	"dev";
+"explicit" = "explícita";
+"fashion" = "moda";
+"food" = "comida";
+"history" = "história";
+"money" = "dinheiro";
+"movie" = "filme";
+"music" = "musica";
+"political" = "política";
+"religion" = "religião";
+"science" = "ciência";
+"sport" = "esporte";
+"travel" = "viagem";

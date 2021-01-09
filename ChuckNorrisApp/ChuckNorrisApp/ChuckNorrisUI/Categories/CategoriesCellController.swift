@@ -14,7 +14,8 @@ class CategoriesCellController: UITableViewCell {
 	var name: String? { didSet {
 		guard let name = name else { return }
 		guard categoryName != nil else { return }
-		categoryName.text = name.prefix(1).capitalized + name.dropFirst()
+		let localizedName = NSLocalizedString(name, comment: "CategoriesCellController")
+		categoryName.text = localizedName.prefix(1).capitalized + localizedName.dropFirst()
 	}}
 
 	override func prepareForReuse() {
