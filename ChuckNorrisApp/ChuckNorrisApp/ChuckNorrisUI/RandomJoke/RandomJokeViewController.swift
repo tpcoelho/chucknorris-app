@@ -12,13 +12,15 @@ class RandomJokeViewController: UIViewController {
 	@IBOutlet weak var jokeTextLabel: UILabel!
 	@IBOutlet weak var jokeImg: UIImageView!
 
-	var jokeCategory: String = "Dev"
-	var jokeImgString: String?
+	lazy var model: RandomJokeViewModel = RandomJokeViewModel(updateMethod: self.updateView)
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-
-		self.jokeTextLabel.text = "\(jokeCategory)"
+	override func viewWillAppear(_ animated: Bool) {
+		self.model.fetchData()
 	}
 
+	func updateView(){
+		guard let joke = self.model.norrisJoke?.joke else { return }
+		self.jokeTextLabel.text = "\(joke)"
+	}
 }
+

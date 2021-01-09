@@ -12,8 +12,9 @@ class CategoriesCellController: UITableViewCell {
 	@IBOutlet weak var categoryName: UILabel!
 
 	var name: String? { didSet {
+		guard let name = name else { return }
 		guard categoryName != nil else { return }
-		categoryName.text = name ?? ""
+		categoryName.text = name.prefix(1).capitalized + name.dropFirst()
 	}}
 
 	override func prepareForReuse() {
