@@ -12,13 +12,13 @@
         <!--Categories-->
         <scene sceneID="cnY-60-1gg">
             <objects>
-                <tableViewController id="RFK-Pn-jrb" sceneMemberID="viewController">
+                <tableViewController id="RFK-Pn-jrb" customClass="CategoriesViewController" customModule="ChuckNorrisApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tGA-vo-DlG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="bgm-kk-CFB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CategoriesCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesCell" rowHeight="80" id="bgm-kk-CFB" customClass="CategoriesCellController" customModule="ChuckNorrisApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bgm-kk-CFB" id="tJO-Ho-QTd">
@@ -33,7 +33,7 @@
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greaterthan" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dZG-QS-fH5" userLabel="openCategory">
                                             <rect key="frame" x="384" y="18" width="20" height="43.5"/>
-                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="rD5-vr-F0T"/>
                                             </constraints>
@@ -49,8 +49,11 @@
                                         <constraint firstItem="dZG-QS-fH5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6jC-wT-sYs" secondAttribute="trailing" constant="10" id="kS0-YK-JiL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryName" destination="6jC-wT-sYs" id="sg4-an-2yi"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="ws1-51-dX3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CategoriesLoadingCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesLoadingCell" rowHeight="80" id="ws1-51-dX3" customClass="LoadingCellController" customModule="ChuckNorrisApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ws1-51-dX3" id="zQC-jq-HNu">
@@ -70,6 +73,9 @@
                                         <constraint firstItem="0lM-tP-fI8" firstAttribute="centerY" secondItem="zQC-jq-HNu" secondAttribute="centerY" id="hRA-to-LTA"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="loadingIndicator" destination="0lM-tP-fI8" id="BPz-5Y-0i2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -79,17 +85,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Categories" id="IfJ-BJ-rDn"/>
                     <connections>
-                        <segue destination="DFK-d2-3pC" kind="show" id="K7P-UW-LFt"/>
+                        <segue destination="DFK-d2-3pC" kind="show" identifier="openRandomJokeSegue" id="K7P-UW-LFt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZi-Bv-APR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="276" y="176"/>
         </scene>
-        <!--View Controller-->
+        <!--Random Joke View Controller-->
         <scene sceneID="HyV-tD-WRR">
             <objects>
-                <viewController id="DFK-d2-3pC" sceneMemberID="viewController">
+                <viewController id="DFK-d2-3pC" customClass="RandomJokeViewController" customModule="ChuckNorrisApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Avq-us-BCD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +126,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZuZ-ZI-BzS"/>
+                    <connections>
+                        <outlet property="jokeImg" destination="4qF-Wh-P8K" id="G9u-jR-nw1"/>
+                        <outlet property="jokeTextLabel" destination="sNq-ZK-fCh" id="Wsd-Gn-Y4W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSL-os-TMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

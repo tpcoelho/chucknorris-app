@@ -13,6 +13,10 @@
 		54FAC46E25A928EB00CAD494 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC46C25A928EB00CAD494 /* Main.storyboard */; };
 		54FAC47025A928EE00CAD494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC46F25A928EE00CAD494 /* Assets.xcassets */; };
 		54FAC47325A928EE00CAD494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FAC47125A928EE00CAD494 /* LaunchScreen.storyboard */; };
+		54FAC48225A93A9000CAD494 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC48125A93A9000CAD494 /* CategoriesViewController.swift */; };
+		54FAC48525A93C7100CAD494 /* CategoriesCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC48425A93C7100CAD494 /* CategoriesCellController.swift */; };
+		54FAC48825A93C8100CAD494 /* LoadingCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC48725A93C8100CAD494 /* LoadingCellController.swift */; };
+		54FAC48C25A9422A00CAD494 /* RandomJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC48B25A9422A00CAD494 /* RandomJokeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		54FAC46F25A928EE00CAD494 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54FAC47225A928EE00CAD494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54FAC47425A928EE00CAD494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54FAC48125A93A9000CAD494 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		54FAC48425A93C7100CAD494 /* CategoriesCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCellController.swift; sourceTree = "<group>"; };
+		54FAC48725A93C8100CAD494 /* LoadingCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCellController.swift; sourceTree = "<group>"; };
+		54FAC48B25A9422A00CAD494 /* RandomJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +77,30 @@
 		54FAC47D25A92ED400CAD494 /* ChuckNorrisUI */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC48A25A941E300CAD494 /* RandomJoke */,
+				54FAC47F25A9397300CAD494 /* Categories */,
 				54FAC46C25A928EB00CAD494 /* Main.storyboard */,
 				54FAC47125A928EE00CAD494 /* LaunchScreen.storyboard */,
 			);
 			path = ChuckNorrisUI;
+			sourceTree = "<group>";
+		};
+		54FAC47F25A9397300CAD494 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC48125A93A9000CAD494 /* CategoriesViewController.swift */,
+				54FAC48425A93C7100CAD494 /* CategoriesCellController.swift */,
+				54FAC48725A93C8100CAD494 /* LoadingCellController.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		54FAC48A25A941E300CAD494 /* RandomJoke */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC48B25A9422A00CAD494 /* RandomJokeViewController.swift */,
+			);
+			path = RandomJoke;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FAC48C25A9422A00CAD494 /* RandomJokeViewController.swift in Sources */,
 				54FAC46B25A928EB00CAD494 /* ViewController.swift in Sources */,
 				54FAC46725A928EB00CAD494 /* AppDelegate.swift in Sources */,
+				54FAC48825A93C8100CAD494 /* LoadingCellController.swift in Sources */,
+				54FAC48225A93A9000CAD494 /* CategoriesViewController.swift in Sources */,
+				54FAC48525A93C7100CAD494 /* CategoriesCellController.swift in Sources */,
 				54FAC46925A928EB00CAD494 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
