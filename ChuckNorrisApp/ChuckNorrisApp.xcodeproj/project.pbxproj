@@ -56,15 +56,23 @@
 		54FAC46525A928EB00CAD494 /* ChuckNorrisApp */ = {
 			isa = PBXGroup;
 			children = (
+				54FAC47D25A92ED400CAD494 /* ChuckNorrisUI */,
 				54FAC46625A928EB00CAD494 /* AppDelegate.swift */,
 				54FAC46825A928EB00CAD494 /* SceneDelegate.swift */,
 				54FAC46A25A928EB00CAD494 /* ViewController.swift */,
-				54FAC46C25A928EB00CAD494 /* Main.storyboard */,
 				54FAC46F25A928EE00CAD494 /* Assets.xcassets */,
-				54FAC47125A928EE00CAD494 /* LaunchScreen.storyboard */,
 				54FAC47425A928EE00CAD494 /* Info.plist */,
 			);
 			path = ChuckNorrisApp;
+			sourceTree = "<group>";
+		};
+		54FAC47D25A92ED400CAD494 /* ChuckNorrisUI */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC46C25A928EB00CAD494 /* Main.storyboard */,
+				54FAC47125A928EE00CAD494 /* LaunchScreen.storyboard */,
+			);
+			path = ChuckNorrisUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
