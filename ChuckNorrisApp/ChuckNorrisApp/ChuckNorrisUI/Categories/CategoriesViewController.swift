@@ -14,7 +14,7 @@ class CategoriesViewController: UITableViewController {
 	})
 
 	override func viewWillAppear(_ animated: Bool) {
-		self.model.fetchData()
+		model.fetchData()
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,7 +30,7 @@ class CategoriesViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		if section == 0 {
 			// Section with categories items
-			return self.model.categories.count
+			return model.categories.count
 		} else if section == 1 {
 			// Section for the loading cell
 			return 1
@@ -42,11 +42,15 @@ class CategoriesViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if indexPath.section == 0 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell") as! CategoriesCellController
-			cell.name = self.model.categories[indexPath.row].name
+			cell.name = model.categories[indexPath.row].name
 			return cell
 		} else {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesLoadingCell") as! LoadingCellController
-			cell.loadingIndicator.startAnimating()
+			if model.isLoading {
+				cell.loadingIndicator.startAnimating()
+			} else {
+				cell.stopLoading()
+			}
 			return cell
 		}
 	}

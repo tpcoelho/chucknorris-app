@@ -14,18 +14,20 @@ class CategoriesViewModel {
 	}
 	var categories: [ChuckNorrisCategory] = [] {
 		didSet {
-			self.updateView()
+			updateView()
 		}
 	}
+	var isLoading: Bool = true
 
 	init(updateMethod: @escaping Callback) {
-		self.updateView = updateMethod
+		updateView = updateMethod
 	}
 
 	func fetchData(){
 		HTTPManager<[ChuckNorrisCategory]>.send(url: URLBuilder.getCategories(), success: { [weak self ] categories in
 			guard self != nil else { return }
-			self?.categories = categories
+				self?.isLoading = falsexw
+				self?.categories = categories
 		})
 	}
 }

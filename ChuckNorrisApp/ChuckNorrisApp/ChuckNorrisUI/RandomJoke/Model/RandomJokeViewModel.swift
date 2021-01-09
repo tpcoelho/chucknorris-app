@@ -14,13 +14,13 @@ class RandomJokeViewModel {
 	}
 	var norrisJoke: ChuckNorrisJoke? {
 		didSet {
-			self.updateView()
+			updateView()
 		}
 	}
 	var selectedCategory: String = "Dev"
 
 	init(updateMethod: @escaping Callback) {
-		self.updateView = updateMethod
+		updateView = updateMethod
 	}
 
 	func fetchData(){

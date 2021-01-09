@@ -15,7 +15,7 @@ class HTTPManager<Model: Decodable> {
 			.responseJSON { (response) in
 			switch response.result {
 			case .success:
-				guard let data = response.data, let model = self.parseModel(with: data) else { return }
+				guard let data = response.data, let model = parseModel(with: data) else { return }
 				success(model)
 			case .failure(let error):
 				print("ERRRO, \(error)")

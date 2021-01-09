@@ -13,11 +13,11 @@ class RandomJokeViewController: UIViewController {
 	@IBOutlet weak var jokeImg: UIImageView!
 	@IBOutlet weak var navItem: UINavigationItem!
 
-	lazy var model: RandomJokeViewModel = RandomJokeViewModel(updateMethod: self.updateView)
+	lazy var model: RandomJokeViewModel = RandomJokeViewModel(updateMethod: updateView)
 
 	override func viewWillAppear(_ animated: Bool) {
 		navItem.title = model.selectedCategory.localizationTitle()
-		self.model.fetchData()
+		model.fetchData()
 	}
 
 	func updateView(){
