@@ -13,6 +13,7 @@
 		54A1DE7025A9EF3B0054C697 /* RandomJokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE6F25A9EF3B0054C697 /* RandomJokeViewModel.swift */; };
 		54A1DE7425A9F18D0054C697 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE7325A9F18D0054C697 /* CategoriesViewModel.swift */; };
 		54A1DE7825A9F81B0054C697 /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE7725A9F81B0054C697 /* HTTPManager.swift */; };
+		54A1DE7D25AA008E0054C697 /* UIImageView+KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE7C25AA008E0054C697 /* UIImageView+KingFisher.swift */; };
 		54FAC46725A928EB00CAD494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC46625A928EB00CAD494 /* AppDelegate.swift */; };
 		54FAC46925A928EB00CAD494 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC46825A928EB00CAD494 /* SceneDelegate.swift */; };
 		54FAC46B25A928EB00CAD494 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC46A25A928EB00CAD494 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		54A1DE6F25A9EF3B0054C697 /* RandomJokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeViewModel.swift; sourceTree = "<group>"; };
 		54A1DE7325A9F18D0054C697 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		54A1DE7725A9F81B0054C697 /* HTTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		54A1DE7C25AA008E0054C697 /* UIImageView+KingFisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+KingFisher.swift"; sourceTree = "<group>"; };
 		54FAC46325A928EB00CAD494 /* ChuckNorrisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FAC46625A928EB00CAD494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FAC46825A928EB00CAD494 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		54A1DE7B25AA005E0054C697 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				54A1DE7C25AA008E0054C697 /* UIImageView+KingFisher.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		54FAC45A25A928EB00CAD494 = {
 			isa = PBXGroup;
 			children = (
@@ -114,9 +124,10 @@
 		54FAC46525A928EB00CAD494 /* ChuckNorrisApp */ = {
 			isa = PBXGroup;
 			children = (
-				54A1DE7625A9F7910054C697 /* Service */,
 				54FAC47D25A92ED400CAD494 /* ChuckNorrisUI */,
 				54A1DE6625A9DF910054C697 /* Models */,
+				54A1DE7625A9F7910054C697 /* Service */,
+				54A1DE7B25AA005E0054C697 /* Others */,
 				54FAC46625A928EB00CAD494 /* AppDelegate.swift */,
 				54FAC46825A928EB00CAD494 /* SceneDelegate.swift */,
 				54FAC46A25A928EB00CAD494 /* ViewController.swift */,
@@ -289,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54FAC48C25A9422A00CAD494 /* RandomJokeViewController.swift in Sources */,
+				54A1DE7D25AA008E0054C697 /* UIImageView+KingFisher.swift in Sources */,
 				54FAC46B25A928EB00CAD494 /* ViewController.swift in Sources */,
 				54FAC46725A928EB00CAD494 /* AppDelegate.swift in Sources */,
 				54FAC48825A93C8100CAD494 /* LoadingCellController.swift in Sources */,

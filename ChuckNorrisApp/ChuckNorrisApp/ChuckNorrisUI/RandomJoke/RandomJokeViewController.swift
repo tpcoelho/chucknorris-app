@@ -19,8 +19,11 @@ class RandomJokeViewController: UIViewController {
 	}
 
 	func updateView(){
-		guard let joke = self.model.norrisJoke?.joke else { return }
-		self.jokeTextLabel.text = "\(joke)"
+		guard let joke = model.norrisJoke?.joke else { return }
+		jokeTextLabel.text = "\(joke)"
+		if let iconURLString = model.norrisJoke?.iconUrl, let iconURL = URL(string: iconURLString) {
+			jokeImg.setImage(for: iconURL)
+		}
 	}
 }
 
