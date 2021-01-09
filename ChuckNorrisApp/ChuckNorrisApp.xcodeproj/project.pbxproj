@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3B4BA3C0AD9573DA57BA8D0E /* Pods_ChuckNorrisApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC85B4BEE9CEFA9625FE82B /* Pods_ChuckNorrisApp.framework */; };
+		54A1DE6825A9DFD00054C697 /* ChuckNorrisCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE6725A9DFD00054C697 /* ChuckNorrisCategory.swift */; };
+		54A1DE6C25A9E0380054C697 /* ChuckNorrisJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE6B25A9E0380054C697 /* ChuckNorrisJoke.swift */; };
 		54FAC46725A928EB00CAD494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC46625A928EB00CAD494 /* AppDelegate.swift */; };
 		54FAC46925A928EB00CAD494 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC46825A928EB00CAD494 /* SceneDelegate.swift */; };
 		54FAC46B25A928EB00CAD494 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FAC46A25A928EB00CAD494 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		271BCCF2B4F8FFEDF5238953 /* Pods-ChuckNorrisApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisApp.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp.release.xcconfig"; sourceTree = "<group>"; };
+		54A1DE6725A9DFD00054C697 /* ChuckNorrisCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisCategory.swift; sourceTree = "<group>"; };
+		54A1DE6B25A9E0380054C697 /* ChuckNorrisJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJoke.swift; sourceTree = "<group>"; };
 		54FAC46325A928EB00CAD494 /* ChuckNorrisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FAC46625A928EB00CAD494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FAC46825A928EB00CAD494 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54A1DE6625A9DF910054C697 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54A1DE6725A9DFD00054C697 /* ChuckNorrisCategory.swift */,
+				54A1DE6B25A9E0380054C697 /* ChuckNorrisJoke.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		54FAC45A25A928EB00CAD494 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				54FAC47D25A92ED400CAD494 /* ChuckNorrisUI */,
+				54A1DE6625A9DF910054C697 /* Models */,
 				54FAC46625A928EB00CAD494 /* AppDelegate.swift */,
 				54FAC46825A928EB00CAD494 /* SceneDelegate.swift */,
 				54FAC46A25A928EB00CAD494 /* ViewController.swift */,
@@ -124,7 +138,6 @@
 				75B383DBD0E484AE607D196F /* Pods-ChuckNorrisApp.debug.xcconfig */,
 				271BCCF2B4F8FFEDF5238953 /* Pods-ChuckNorrisApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -247,6 +260,8 @@
 				54FAC46725A928EB00CAD494 /* AppDelegate.swift in Sources */,
 				54FAC48825A93C8100CAD494 /* LoadingCellController.swift in Sources */,
 				54FAC48225A93A9000CAD494 /* CategoriesViewController.swift in Sources */,
+				54A1DE6C25A9E0380054C697 /* ChuckNorrisJoke.swift in Sources */,
+				54A1DE6825A9DFD00054C697 /* ChuckNorrisCategory.swift in Sources */,
 				54FAC48525A93C7100CAD494 /* CategoriesCellController.swift in Sources */,
 				54FAC46925A928EB00CAD494 /* SceneDelegate.swift in Sources */,
 			);
