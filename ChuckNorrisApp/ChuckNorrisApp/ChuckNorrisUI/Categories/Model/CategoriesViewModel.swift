@@ -23,14 +23,9 @@ class CategoriesViewModel {
 	}
 
 	func fetchData(){
-		do {
-			let json = """
-			["animal","career","celebrity","dev","explicit","fashion","food","history","money","movie","music","political","religion","science","sport","travel"]
-			""".data(using: .utf8)! // our data in native format
-			categories = try JSONDecoder().decode([ChuckNorrisCategory].self, from: json) // do your decoding here
-			print(categories)
-		} catch {
-			print(error) // any decoding error will be printed here!
-		}
+		HTTPManager<[ChuckNorrisCategory]>.send(url: "https://api.chucknorris.io/jokes/categories", success: { [weak self ] categories in
+			guard self != nil else { return }
+			self?.categories = categories
+		})
 	}
 }

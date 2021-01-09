@@ -24,15 +24,9 @@ class RandomJokeViewModel {
 	}
 
 	func fetchData(){
-		print(selectedCategory)
-		do {
-			let json = """
-			{"categories":["science"],"created_at":"2020-01-05 13:42:19.324003","icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png","id":"jtibnb-mtuyluzqrwtodzw","updated_at":"2020-01-05 13:42:19.324003","url":"https://api.chucknorris.io/jokes/jtibnb-mtuyluzqrwtodzw","value":"Chuck Norris can divide by zero."}
-			""".data(using: .utf8)! // our data in native format
-			norrisJoke = try JSONDecoder().decode(ChuckNorrisJoke.self, from: json) // do your decoding here
-			print(norrisJoke)
-		} catch {
-			print(error) // any decoding error will be printed here!
-		}
+		HTTPManager<ChuckNorrisJoke>.send(url: "https://api.chucknorris.io/jokes/random?category=\(selectedCategory)", success: { [weak self ] joke in
+			guard self != nil else { return }
+			self?.norrisJoke = joke
+		})
 	}
 }
