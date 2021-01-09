@@ -9,7 +9,7 @@ import Foundation
 
 class CategoriesViewModel {
 
-	var updateView: () -> Void = {
+	var updateView: Callback = {
 		fatalError("Method: updateView. Must be overrided")
 	}
 	var categories: [ChuckNorrisCategory] = [] {
@@ -18,12 +18,12 @@ class CategoriesViewModel {
 		}
 	}
 
-	init(updateMethod: @escaping () -> Void) {
+	init(updateMethod: @escaping Callback) {
 		self.updateView = updateMethod
 	}
 
 	func fetchData(){
-		HTTPManager<[ChuckNorrisCategory]>.send(url: "https://api.chucknorris.io/jokes/categories", success: { [weak self ] categories in
+		HTTPManager<[ChuckNorrisCategory]>.send(url: URLBuilder.getCategories(), success: { [weak self ] categories in
 			guard self != nil else { return }
 			self?.categories = categories
 		})

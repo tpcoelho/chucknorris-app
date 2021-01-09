@@ -10,7 +10,7 @@ import Alamofire
 
 class HTTPManager<Model: Decodable> {
 
-	static func send(url: String, success: @escaping (Model) -> Void ){
+	static func send(url: String, success: @escaping SuccessCallback<Model> ){
 		AF.request(url, method: .get)
 			.responseJSON { (response) in
 			switch response.result {

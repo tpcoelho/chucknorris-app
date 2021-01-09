@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3B4BA3C0AD9573DA57BA8D0E /* Pods_ChuckNorrisApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC85B4BEE9CEFA9625FE82B /* Pods_ChuckNorrisApp.framework */; };
 		544348F025AA0A3C009635E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 544348F225AA0A3C009635E0 /* Localizable.strings */; };
+		544348FB25AA28D4009635E0 /* TypealiasHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544348FA25AA28D4009635E0 /* TypealiasHelper.swift */; };
+		544348FE25AA2B49009635E0 /* Title+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544348FD25AA2B49009635E0 /* Title+String.swift */; };
+		5443490125AA2D04009635E0 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5443490025AA2D04009635E0 /* URLConstant.swift */; };
 		54A1DE6825A9DFD00054C697 /* ChuckNorrisCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE6725A9DFD00054C697 /* ChuckNorrisCategory.swift */; };
 		54A1DE6C25A9E0380054C697 /* ChuckNorrisJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE6B25A9E0380054C697 /* ChuckNorrisJoke.swift */; };
 		54A1DE7025A9EF3B0054C697 /* RandomJokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE6F25A9EF3B0054C697 /* RandomJokeViewModel.swift */; };
@@ -32,6 +35,9 @@
 		544348F125AA0A3C009635E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		544348F425AA0A41009635E0 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		544348F525AA0A42009635E0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		544348FA25AA28D4009635E0 /* TypealiasHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypealiasHelper.swift; sourceTree = "<group>"; };
+		544348FD25AA2B49009635E0 /* Title+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Title+String.swift"; sourceTree = "<group>"; };
+		5443490025AA2D04009635E0 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
 		54A1DE6725A9DFD00054C697 /* ChuckNorrisCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisCategory.swift; sourceTree = "<group>"; };
 		54A1DE6B25A9E0380054C697 /* ChuckNorrisJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJoke.swift; sourceTree = "<group>"; };
 		54A1DE6F25A9EF3B0054C697 /* RandomJokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeViewModel.swift; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				54A1DE7C25AA008E0054C697 /* UIImageView+KingFisher.swift */,
+				544348FA25AA28D4009635E0 /* TypealiasHelper.swift */,
+				544348FD25AA2B49009635E0 /* Title+String.swift */,
+				5443490025AA2D04009635E0 /* URLConstant.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -322,10 +331,13 @@
 				54A1DE6C25A9E0380054C697 /* ChuckNorrisJoke.swift in Sources */,
 				54A1DE6825A9DFD00054C697 /* ChuckNorrisCategory.swift in Sources */,
 				54A1DE7825A9F81B0054C697 /* HTTPManager.swift in Sources */,
+				5443490125AA2D04009635E0 /* URLConstant.swift in Sources */,
 				54FAC48525A93C7100CAD494 /* CategoriesCellController.swift in Sources */,
 				54A1DE7025A9EF3B0054C697 /* RandomJokeViewModel.swift in Sources */,
 				54FAC46925A928EB00CAD494 /* SceneDelegate.swift in Sources */,
+				544348FB25AA28D4009635E0 /* TypealiasHelper.swift in Sources */,
 				54A1DE7425A9F18D0054C697 /* CategoriesViewModel.swift in Sources */,
+				544348FE25AA2B49009635E0 /* Title+String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,10 +11,12 @@ class RandomJokeViewController: UIViewController {
 
 	@IBOutlet weak var jokeTextLabel: UILabel!
 	@IBOutlet weak var jokeImg: UIImageView!
+	@IBOutlet weak var navItem: UINavigationItem!
 
 	lazy var model: RandomJokeViewModel = RandomJokeViewModel(updateMethod: self.updateView)
 
 	override func viewWillAppear(_ animated: Bool) {
+		navItem.title = model.selectedCategory.localizationTitle()
 		self.model.fetchData()
 	}
 
@@ -24,6 +26,7 @@ class RandomJokeViewController: UIViewController {
 		if let iconURLString = model.norrisJoke?.iconUrl, let iconURL = URL(string: iconURLString) {
 			jokeImg.setImage(for: iconURL)
 		}
+
 	}
 }
 

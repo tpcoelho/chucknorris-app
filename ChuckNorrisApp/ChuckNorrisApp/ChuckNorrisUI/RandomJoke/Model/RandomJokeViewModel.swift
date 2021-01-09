@@ -9,7 +9,7 @@ import Foundation
 
 class RandomJokeViewModel {
 
-	var updateView: () -> Void = {
+	var updateView: Callback = {
 		fatalError("Method: updateView. Must be overrided")
 	}
 	var norrisJoke: ChuckNorrisJoke? {
@@ -19,12 +19,12 @@ class RandomJokeViewModel {
 	}
 	var selectedCategory: String = "Dev"
 
-	init(updateMethod: @escaping () -> Void) {
+	init(updateMethod: @escaping Callback) {
 		self.updateView = updateMethod
 	}
 
 	func fetchData(){
-		HTTPManager<ChuckNorrisJoke>.send(url: "https://api.chucknorris.io/jokes/random?category=\(selectedCategory)", success: { [weak self ] joke in
+		HTTPManager<ChuckNorrisJoke>.send(url: URLBuilder.getRandomJoke(for: selectedCategory), success: { [weak self ] joke in
 			guard self != nil else { return }
 			self?.norrisJoke = joke
 		})
