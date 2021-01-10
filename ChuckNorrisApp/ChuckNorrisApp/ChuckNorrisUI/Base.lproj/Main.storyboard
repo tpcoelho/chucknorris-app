@@ -53,30 +53,6 @@
                                     <outlet property="categoryName" destination="6jC-wT-sYs" id="sg4-an-2yi"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CategoriesLoadingCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesLoadingCell" rowHeight="80" id="ws1-51-dX3" customClass="LoadingCellController" customModule="ChuckNorrisApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="108" width="414" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ws1-51-dX3" id="zQC-jq-HNu">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0lM-tP-fI8">
-                                            <rect key="frame" x="187" y="20" width="40" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="0lM-tP-fI8" secondAttribute="height" multiplier="1:1" id="FLu-qX-QLA"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="pmE-AK-xNN"/>
-                                            </constraints>
-                                        </activityIndicatorView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="0lM-tP-fI8" firstAttribute="centerX" secondItem="zQC-jq-HNu" secondAttribute="centerX" id="J5E-mE-Gzc"/>
-                                        <constraint firstItem="0lM-tP-fI8" firstAttribute="centerY" secondItem="zQC-jq-HNu" secondAttribute="centerY" id="hRA-to-LTA"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="loadingIndicator" destination="0lM-tP-fI8" id="BPz-5Y-0i2"/>
-                                </connections>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="RFK-Pn-jrb" id="493-aj-zk4"/>
@@ -100,36 +76,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-ZK-fCh">
-                                <rect key="frame" x="40" y="218" width="334" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4qF-Wh-P8K">
-                                <rect key="frame" x="177" y="134" width="60" height="58"/>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="4qF-Wh-P8K" secondAttribute="height" multiplier="1:1" id="BHH-B6-sC4"/>
-                                    <constraint firstAttribute="height" constant="60" id="lkG-dK-EC3"/>
-                                </constraints>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y9O-2n-Kf9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RandomJokeCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RandomJokeCell" rowHeight="300" id="6dS-22-lQD" customClass="RandomJokeCell" customModule="ChuckNorrisApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6dS-22-lQD" id="BeJ-P4-fOf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4qF-Wh-P8K">
+                                                    <rect key="frame" x="177" y="22" width="60" height="58"/>
+                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="4qF-Wh-P8K" secondAttribute="height" multiplier="1:1" id="BHH-B6-sC4"/>
+                                                        <constraint firstAttribute="height" constant="60" id="lkG-dK-EC3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuck Norris knows the last digit of pi." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-ZK-fCh">
+                                                    <rect key="frame" x="25" y="91" width="364" height="204"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sNq-ZK-fCh" firstAttribute="top" secondItem="4qF-Wh-P8K" secondAttribute="bottom" constant="10" id="L9H-KL-Rwo"/>
+                                                <constraint firstItem="4qF-Wh-P8K" firstAttribute="top" secondItem="BeJ-P4-fOf" secondAttribute="topMargin" constant="10" id="Y0U-xT-Cdx"/>
+                                                <constraint firstAttribute="trailing" secondItem="sNq-ZK-fCh" secondAttribute="trailing" constant="25" id="Zve-g6-KLG"/>
+                                                <constraint firstItem="4qF-Wh-P8K" firstAttribute="centerX" secondItem="BeJ-P4-fOf" secondAttribute="centerX" id="ef8-BQ-Ja5"/>
+                                                <constraint firstAttribute="bottom" secondItem="sNq-ZK-fCh" secondAttribute="bottom" constant="5" id="xBq-OZ-UTh"/>
+                                                <constraint firstItem="sNq-ZK-fCh" firstAttribute="leading" secondItem="BeJ-P4-fOf" secondAttribute="leading" constant="25" id="xMe-st-lbh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jokeIconImg" destination="4qF-Wh-P8K" id="VRO-q3-jJE"/>
+                                            <outlet property="jokeTxtLabel" destination="sNq-ZK-fCh" id="Q0h-nt-NoF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mW4-dS-zZ4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mW4-dS-zZ4" firstAttribute="trailing" secondItem="sNq-ZK-fCh" secondAttribute="trailing" constant="40" id="a7u-V3-ZKa"/>
-                            <constraint firstItem="4qF-Wh-P8K" firstAttribute="top" secondItem="mW4-dS-zZ4" secondAttribute="top" constant="45" id="aln-tP-gjl"/>
-                            <constraint firstItem="sNq-ZK-fCh" firstAttribute="leading" secondItem="mW4-dS-zZ4" secondAttribute="leading" constant="40" id="eN4-5r-sHv"/>
-                            <constraint firstItem="sNq-ZK-fCh" firstAttribute="top" secondItem="4qF-Wh-P8K" secondAttribute="bottom" constant="25" id="lfY-1d-Fh9"/>
-                            <constraint firstItem="4qF-Wh-P8K" firstAttribute="centerX" secondItem="Avq-us-BCD" secondAttribute="centerX" id="nY9-d1-8TN"/>
+                            <constraint firstItem="y9O-2n-Kf9" firstAttribute="top" secondItem="mW4-dS-zZ4" secondAttribute="top" id="Mcv-cp-3v9"/>
+                            <constraint firstItem="y9O-2n-Kf9" firstAttribute="leading" secondItem="mW4-dS-zZ4" secondAttribute="leading" id="dv3-Ph-6fP"/>
+                            <constraint firstItem="mW4-dS-zZ4" firstAttribute="bottom" secondItem="y9O-2n-Kf9" secondAttribute="bottom" id="ie0-Ei-lA3"/>
+                            <constraint firstItem="mW4-dS-zZ4" firstAttribute="trailing" secondItem="y9O-2n-Kf9" secondAttribute="trailing" id="zuI-rn-mOX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZuZ-ZI-BzS"/>
                     <connections>
-                        <outlet property="jokeImg" destination="4qF-Wh-P8K" id="G9u-jR-nw1"/>
-                        <outlet property="jokeTextLabel" destination="sNq-ZK-fCh" id="Wsd-Gn-Y4W"/>
                         <outlet property="navItem" destination="ZuZ-ZI-BzS" id="t86-Lc-MqL"/>
+                        <outlet property="randomJokeTableView" destination="y9O-2n-Kf9" id="oHr-Zo-OlH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSL-os-TMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

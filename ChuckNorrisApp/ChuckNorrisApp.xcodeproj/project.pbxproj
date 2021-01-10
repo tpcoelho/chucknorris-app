@@ -12,6 +12,8 @@
 		544348FB25AA28D4009635E0 /* TypealiasHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544348FA25AA28D4009635E0 /* TypealiasHelper.swift */; };
 		544348FE25AA2B49009635E0 /* Title+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544348FD25AA2B49009635E0 /* Title+String.swift */; };
 		5443490125AA2D04009635E0 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5443490025AA2D04009635E0 /* URLConstant.swift */; };
+		5443490825AA8439009635E0 /* RandomJokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5443490725AA8439009635E0 /* RandomJokeCell.swift */; };
+		5458229425AA8E6100100305 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5458229325AA8E6100100305 /* LoadingCell.xib */; };
 		54A1DE6825A9DFD00054C697 /* ChuckNorrisCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE6725A9DFD00054C697 /* ChuckNorrisCategory.swift */; };
 		54A1DE6C25A9E0380054C697 /* ChuckNorrisJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE6B25A9E0380054C697 /* ChuckNorrisJoke.swift */; };
 		54A1DE7025A9EF3B0054C697 /* RandomJokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1DE6F25A9EF3B0054C697 /* RandomJokeViewModel.swift */; };
@@ -38,6 +40,8 @@
 		544348FA25AA28D4009635E0 /* TypealiasHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypealiasHelper.swift; sourceTree = "<group>"; };
 		544348FD25AA2B49009635E0 /* Title+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Title+String.swift"; sourceTree = "<group>"; };
 		5443490025AA2D04009635E0 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
+		5443490725AA8439009635E0 /* RandomJokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeCell.swift; sourceTree = "<group>"; };
+		5458229325AA8E6100100305 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		54A1DE6725A9DFD00054C697 /* ChuckNorrisCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisCategory.swift; sourceTree = "<group>"; };
 		54A1DE6B25A9E0380054C697 /* ChuckNorrisJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJoke.swift; sourceTree = "<group>"; };
 		54A1DE6F25A9EF3B0054C697 /* RandomJokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJokeViewModel.swift; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5458229225AA8E3100100305 /* LoadingCell */ = {
+			isa = PBXGroup;
+			children = (
+				54FAC48725A93C8100CAD494 /* LoadingCellController.swift */,
+				5458229325AA8E6100100305 /* LoadingCell.xib */,
+			);
+			path = LoadingCell;
+			sourceTree = "<group>";
+		};
 		54A1DE6625A9DF910054C697 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,7 @@
 			children = (
 				54FAC48A25A941E300CAD494 /* RandomJoke */,
 				54FAC47F25A9397300CAD494 /* Categories */,
+				5458229225AA8E3100100305 /* LoadingCell */,
 				54FAC46C25A928EB00CAD494 /* Main.storyboard */,
 				54FAC47125A928EE00CAD494 /* LaunchScreen.storyboard */,
 			);
@@ -174,7 +188,6 @@
 				54A1DE7225A9F1540054C697 /* Model */,
 				54FAC48125A93A9000CAD494 /* CategoriesViewController.swift */,
 				54FAC48425A93C7100CAD494 /* CategoriesCellController.swift */,
-				54FAC48725A93C8100CAD494 /* LoadingCellController.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -184,6 +197,7 @@
 			children = (
 				54A1DE6E25A9EF250054C697 /* Model */,
 				54FAC48B25A9422A00CAD494 /* RandomJokeViewController.swift */,
+				5443490725AA8439009635E0 /* RandomJokeCell.swift */,
 			);
 			path = RandomJoke;
 			sourceTree = "<group>";
@@ -269,6 +283,7 @@
 				54FAC47325A928EE00CAD494 /* LaunchScreen.storyboard in Resources */,
 				544348F025AA0A3C009635E0 /* Localizable.strings in Resources */,
 				54FAC47025A928EE00CAD494 /* Assets.xcassets in Resources */,
+				5458229425AA8E6100100305 /* LoadingCell.xib in Resources */,
 				54FAC46E25A928EB00CAD494 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +345,7 @@
 				54FAC48225A93A9000CAD494 /* CategoriesViewController.swift in Sources */,
 				54A1DE6C25A9E0380054C697 /* ChuckNorrisJoke.swift in Sources */,
 				54A1DE6825A9DFD00054C697 /* ChuckNorrisCategory.swift in Sources */,
+				5443490825AA8439009635E0 /* RandomJokeCell.swift in Sources */,
 				54A1DE7825A9F81B0054C697 /* HTTPManager.swift in Sources */,
 				5443490125AA2D04009635E0 /* URLConstant.swift in Sources */,
 				54FAC48525A93C7100CAD494 /* CategoriesCellController.swift in Sources */,

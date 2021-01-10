@@ -12,21 +12,27 @@ class RandomJokeViewModel {
 	var updateView: Callback = {
 		fatalError("Method: updateView. Must be overrided")
 	}
-	var norrisJoke: ChuckNorrisJoke? {
-		didSet {
-			updateView()
-		}
+	var refreshEnd: Callback = {
+		fatalError("Method: refreshEnd. Must be overrided")
 	}
-	var selectedCategory: String = "Dev"
 
-	init(updateMethod: @escaping Callback) {
-		updateView = updateMethod
+	var norrisJoke: ChuckNorrisJoke?
+
+	var selectedCategory: String = "Dev"
+	var isLoading = true
+
+	init(updateMethod: @escaping Callback, refreshEnd: @escaping Callback) {
+		self.updateView = updateMethod
+		self.refreshEnd = refreshEnd
 	}
 
 	func fetchData(){
-		HTTPManager<ChuckNorrisJoke>.send(url: URLBuilder.getRandomJoke(for: selectedCategory), success: { [weak self ] joke in
-			guard self != nil else { return }
-			self?.norrisJoke = joke
+		HTTPManager<ChuckNorrisJoke>.send(url: URLBuilder.getRandomJoke(for: selectedCategory), success: { [ weak self ] joke in
+			guard let _self = self else { return }
+			_self.norrisJoke = joke
+			_self.isLoading = false
+			_self.updateView()
+			_self.refreshEnd()
 		})
 	}
 }

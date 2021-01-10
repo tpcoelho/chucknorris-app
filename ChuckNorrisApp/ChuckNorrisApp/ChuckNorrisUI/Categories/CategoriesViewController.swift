@@ -12,6 +12,12 @@ class CategoriesViewController: UITableViewController {
 	private lazy var model: CategoriesViewModel = CategoriesViewModel(updateMethod: {
 		self.tableView.reloadData()
 	})
+	private let reuseLoadingCellId = "LoadingCell"
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		self.tableView.register(UINib(nibName: reuseLoadingCellId, bundle: nil), forCellReuseIdentifier: reuseLoadingCellId)
+	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		model.fetchData()
@@ -45,7 +51,7 @@ class CategoriesViewController: UITableViewController {
 			cell.name = model.categories[indexPath.row].name
 			return cell
 		} else {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesLoadingCell") as! LoadingCellController
+			let cell = tableView.dequeueReusableCell(withIdentifier: "LoadingCell") as! LoadingCellController
 			if model.isLoading {
 				cell.loadingIndicator.startAnimating()
 			} else {

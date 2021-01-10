@@ -9,24 +9,65 @@ import UIKit
 
 class RandomJokeViewController: UIViewController {
 
-	@IBOutlet weak var jokeTextLabel: UILabel!
-	@IBOutlet weak var jokeImg: UIImageView!
 	@IBOutlet weak var navItem: UINavigationItem!
+	@IBOutlet weak var randomJokeTableView: UITableView!
 
-	lazy var model: RandomJokeViewModel = RandomJokeViewModel(updateMethod: updateView)
+	lazy var model: RandomJokeViewModel = RandomJokeViewModel(updateMethod: {
+		self.randomJokeTableView.reloadData()
+	}, refreshEnd: {
+		self.randomJokeTableView.refreshControl?.endRefreshing()
+	})
+
+	private let reuseLoadingCellId = "LoadingCell"
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		randomJokeTableView.dataSource = self
+		randomJokeTableView.delegate = self
+
+		randomJokeTableView.register(UINib(nibName: reuseLoadingCellId, bundle: nil), forCellReuseIdentifier: reuseLoadingCellId)
+
+		randomJokeTableView.refreshControl = UIRefreshControl()
+		randomJokeTableView.refreshControl!.addTarget(self, action: #selector(self.refreshData), for: UIControl.Event.valueChanged)
+	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		navItem.title = model.selectedCategory.localizationTitle()
 		model.fetchData()
 	}
 
-	func updateView(){
-		guard let joke = model.norrisJoke?.joke else { return }
-		jokeTextLabel.text = "\(joke)"
-		if let iconURLString = model.norrisJoke?.iconUrl, let iconURL = URL(string: iconURLString) {
-			jokeImg.setImage(for: iconURL)
-		}
-
+	@objc private func refreshData() {
+		self.model.fetchData()
 	}
 }
 
+extension RandomJokeViewController: UITableViewDelegate, UITableViewDataSource {
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return 1
+	}
+
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return 1
+	}
+
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		if model.isLoading {
+			let cell = tableView.dequeueReusableCell(withIdentifier: reuseLoadingCellId) as! LoadingCellController
+			return cell
+		} else {
+			 // Section for the loading cell
+			let cell = tableView.dequeueReusableCell(withIdentifier: "RandomJokeCell") as! RandomJokeCell
+			cell.norrisJoke = model.norrisJoke
+			cell.updateCell()
+			return cell
+		}
+	}
+
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		if model.isLoading {
+			return 80
+		} else {
+			return UITableView.automaticDimension
+		}
+	}
+}

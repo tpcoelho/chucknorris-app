@@ -26,7 +26,7 @@ class CategoriesViewModel {
 	func fetchData(){
 		HTTPManager<[ChuckNorrisCategory]>.send(url: URLBuilder.getCategories(), success: { [weak self ] categories in
 			guard self != nil else { return }
-				self?.isLoading = falsexw
+				self?.isLoading = false
 				self?.categories = categories
 		})
 	}

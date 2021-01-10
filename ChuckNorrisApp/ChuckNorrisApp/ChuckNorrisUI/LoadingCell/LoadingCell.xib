@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LoadingCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" id="VfU-st-oP3" customClass="LoadingCellController" customModule="ChuckNorrisApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VfU-st-oP3" id="VHA-9G-Cxt">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Kw0-er-NX2">
+                        <rect key="frame" x="187" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="iiU-OK-3rT"/>
+                            <constraint firstAttribute="width" secondItem="Kw0-er-NX2" secondAttribute="height" multiplier="1:1" id="p2V-Er-gmG"/>
+                        </constraints>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kw0-er-NX2" firstAttribute="centerX" secondItem="VHA-9G-Cxt" secondAttribute="centerX" id="OSt-4q-IV3"/>
+                    <constraint firstItem="Kw0-er-NX2" firstAttribute="centerY" secondItem="VHA-9G-Cxt" secondAttribute="centerY" id="dsc-KQ-4LI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="loadingIndicator" destination="Kw0-er-NX2" id="hIs-ju-iBv"/>
+            </connections>
+            <point key="canvasLocation" x="183" y="-54"/>
+        </tableViewCell>
+    </objects>
+</document>
