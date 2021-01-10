@@ -1,5 +1,5 @@
 # chucknorris-app
-Simple app integrating chuckNorrisApi
+Simple app with integration of API from [ChuckNorris.io](https://api.chucknorris.io)
 
 # Build app
 
