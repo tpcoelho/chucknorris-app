@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Kw0-er-NX2">
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kw0-er-NX2">
                         <rect key="frame" x="187" y="2" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="iiU-OK-3rT"/>

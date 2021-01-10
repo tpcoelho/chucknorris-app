@@ -17,7 +17,7 @@ extension UIImageView {
 		self.kf.indicatorType = .activity
 		self.kf.setImage(
 			with: url,
-			placeholder: UIImage(systemName: "questionmark.square.dashed"),
+			placeholder: UIImage(named: "questionmark.square.dashed"),
 			options: [
 				.scaleFactor(UIScreen.main.scale),
 				.transition(.fade(0.5)),
