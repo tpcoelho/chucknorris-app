@@ -10,7 +10,7 @@ import Alamofire
 
 class HTTPManager<Model: Decodable> {
 
-	static func send(url: String, success: @escaping SuccessCallback<Model> ){
+	static func send(url: String, success: @escaping SuccessCallback<Model>) {
 		AF.request(url, method: .get)
 			.responseJSON { (response) in
 			switch response.result {
@@ -24,7 +24,7 @@ class HTTPManager<Model: Decodable> {
 	}
 
 	static func parseModel(with data: Data) -> Model? {
-		do{
+		do {
 			let decoder = JSONDecoder()
 			let model = try decoder.decode(Model.self, from: data)
 			return model

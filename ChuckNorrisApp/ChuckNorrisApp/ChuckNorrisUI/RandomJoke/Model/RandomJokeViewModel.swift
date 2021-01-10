@@ -26,7 +26,7 @@ class RandomJokeViewModel {
 		self.refreshEnd = refreshEnd
 	}
 
-	func fetchData(){
+	func fetchData() {
 		HTTPManager<ChuckNorrisJoke>.send(url: URLBuilder.getRandomJoke(for: selectedCategory), success: { [ weak self ] joke in
 			guard let _self = self else { return }
 			_self.norrisJoke = joke

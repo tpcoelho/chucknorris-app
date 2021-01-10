@@ -23,7 +23,7 @@ class CategoriesViewModel {
 		updateView = updateMethod
 	}
 
-	func fetchData(){
+	func fetchData() {
 		HTTPManager<[ChuckNorrisCategory]>.send(url: URLBuilder.getCategories(), success: { [weak self ] categories in
 			guard self != nil else { return }
 				self?.isLoading = false

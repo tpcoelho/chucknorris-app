@@ -52,11 +52,15 @@ extension RandomJokeViewController: UITableViewDelegate, UITableViewDataSource {
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if model.isLoading {
-			let cell = tableView.dequeueReusableCell(withIdentifier: reuseLoadingCellId) as! LoadingCellController
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseLoadingCellId) as? LoadingCellController else {
+				return UITableViewCell()
+			}
 			return cell
 		} else {
 			 // Section for the loading cell
-			let cell = tableView.dequeueReusableCell(withIdentifier: "RandomJokeCell") as! RandomJokeCell
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: "RandomJokeCell") as? RandomJokeCell else {
+				return UITableViewCell()
+			}
 			cell.norrisJoke = model.norrisJoke
 			cell.updateCell()
 			return cell

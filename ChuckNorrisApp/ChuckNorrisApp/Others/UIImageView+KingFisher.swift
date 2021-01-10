@@ -10,9 +10,6 @@ import Kingfisher
 
 extension UIImageView {
 
-	//questionmark.square.dashed
-	//	questionmark.circle
-
 	func setImage(for url: URL) {
 		self.kf.indicatorType = .activity
 		self.kf.setImage(
@@ -22,16 +19,13 @@ extension UIImageView {
 				.scaleFactor(UIScreen.main.scale),
 				.transition(.fade(0.5)),
 				.cacheOriginalImage
-			])
-		{
-			result in
-			switch result {
-			case .success(let value):
-                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-				break;
-			case .failure(let error):
-				print("Job failed: \(error.localizedDescription)")
+			]) { result in
+				switch result {
+				case .success(let value):
+					print("Task done for: \(value.source.url?.absoluteString ?? "")")
+				case .failure(let error):
+					print("Job failed: \(error.localizedDescription)")
+				}
 			}
-		}
 	}
 }

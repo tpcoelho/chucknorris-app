@@ -40,18 +40,22 @@ class CategoriesViewController: UITableViewController {
 		} else if section == 1 {
 			// Section for the loading cell
 			return 1
-		}else {
+		} else {
 			return 0
 		}
 	}
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if indexPath.section == 0 {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell") as! CategoriesCellController
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesCell") as? CategoriesCellController else {
+				return UITableViewCell()
+			}
 			cell.name = model.categories[indexPath.row].name
 			return cell
 		} else {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "LoadingCell") as! LoadingCellController
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: "LoadingCell") as? LoadingCellController else {
+				return UITableViewCell()
+			}
 			if model.isLoading {
 				cell.loadingIndicator.startAnimating()
 			} else {

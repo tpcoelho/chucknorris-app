@@ -21,7 +21,7 @@ class LoadingCellController: UITableViewCell {
 		 loadingIndicator.startAnimating()
 	 }
 
-	 func stopLoading(){
+	 func stopLoading() {
 		 loadingIndicator.hidesWhenStopped = true
 		 loadingIndicator.stopAnimating()
 	 }
