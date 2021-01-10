@@ -227,6 +227,7 @@
 			buildConfigurationList = 54FAC47725A928EE00CAD494 /* Build configuration list for PBXNativeTarget "ChuckNorrisApp" */;
 			buildPhases = (
 				F5F18E329780E6627327C4F1 /* [CP] Check Pods Manifest.lock */,
+				54CBFBFE25AA9E8600CBF706 /* SwiftLint */,
 				54FAC45F25A928EB00CAD494 /* Sources */,
 				54FAC46025A928EB00CAD494 /* Frameworks */,
 				54FAC46125A928EB00CAD494 /* Resources */,
@@ -291,6 +292,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		54CBFBFE25AA9E8600CBF706 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		79887EEE684E04DBAF25EDBD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
